@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MindSprout | Learn • Practice • Grow</title>
+<meta name="description" content="MindSprout: Worksheets, study notes, quizzes and learning resources from Nursery to Competitive Exams.">
+<style>
+:root{--navy:#09265f;--green:#07843c;--blue:#0784e8;--light:#eff9ff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--navy);background:#fff}
+a{color:inherit;text-decoration:none}
+button,input{font:inherit}
+button{cursor:pointer}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:10px 4%;background:white;position:sticky;top:0;z-index:10;box-shadow:0 2px 8px #09265f16}
+.logo{display:flex;align-items:center;gap:8px;font-size:27px;font-weight:900;white-space:nowrap}
+.logo .sprout{font-size:35px}
+.logo small{display:block;font-size:11px;text-align:center;color:#0879c9}
+.search{display:flex;max-width:620px;flex:1;border:1px solid #ccd9e7;border-radius:9px;overflow:hidden}
+.search input{min-width:0;flex:1;border:0;padding:12px;outline:none}
+.search button{background:var(--blue);color:white;border:0;padding:10px 18px}
+.account{display:flex;gap:10px}
+.btn{display:inline-block;border:1px solid #8bbbd6;border-radius:8px;padding:11px 17px;font-weight:bold;background:white;color:#0871c8}
+.btn.green{background:var(--green);border-color:var(--green);color:white}
+.hero{min-height:300px;padding:30px 5%;display:flex;align-items:center;justify-content:space-between;gap:20px;overflow:hidden;background:linear-gradient(120deg,#a8eaff,#e0faff 48%,#52c9ef);position:relative}
+.hero:after{content:"";position:absolute;bottom:-70px;left:-5%;width:110%;height:110px;border-radius:50%;background:#51bd47}
+.hero-copy{max-width:590px;z-index:1}
+.hero h1{font-size:clamp(34px,4vw,58px);line-height:1.05;margin:0 0 8px;color:#09265f}
+.hero h1 span{color:#07843c}
+.hero h2{font-size:clamp(20px,2.5vw,29px);margin:8px 0}
+.hero p{font-size:18px;margin:8px 0}
+.features{display:flex;flex-wrap:wrap;gap:15px;margin:18px 0;font-weight:bold}
+.ribbon{display:inline-block;background:#ffe44e;padding:12px 20px;border-radius:30px;font-size:19px;font-weight:bold;transform:rotate(-2deg)}
+.hero-art{z-index:1;min-width:260px;text-align:center}
+.kids{font-size:clamp(68px,9vw,125px);line-height:1.25;white-space:nowrap}
+.books{font-size:22px;font-weight:900;line-height:1.8}
+.books span{display:block;border-radius:8px;padding:0 15px;margin:3px auto;max-width:310px;color:white;background:#ed2876;box-shadow:0 3px 0 #123}
+.books span:nth-child(2){background:#ffca28;color:#172e60}
+.books span:nth-child(3){background:#087ee7}
+.signs{position:absolute;right:2%;top:14px;display:grid;gap:5px;transform:rotate(3deg);z-index:2}
+.signs span{padding:8px 13px;background:#ffdc5b;border:2px solid #ae7c24;border-radius:4px;font-weight:bold;color:#123}
+.signs span:nth-child(even){background:#8ee3fa}
+section{padding:24px 3%}
+.section-title{font-size:23px;margin:0 0 5px}
+.subtitle{margin:0 0 18px;font-size:15px}
+.categories{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.category{padding:15px 12px;border-radius:13px;display:flex;flex-direction:column;min-width:0;box-shadow:0 2px 7px #15315b12}
+.category:nth-child(1){background:#ffedf5}
+.category:nth-child(2){background:#e8f6ff}
+.category:nth-child(3){background:#e9ffed}
+.category:nth-child(4){background:#fff8dc}
+.category:nth-child(5){background:#f4eaff}
+.cat-icon{text-align:center;font-size:48px}
+.category h3{font-size:17px;margin:8px 0}
+.category ul{padding-left:18px;margin:6px 0 16px;font-size:13px;line-height:1.55;flex:1}
+.actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:auto}
+.actions a{font-size:12px;padding:9px 10px;border-radius:7px;border:1px solid #1683ca;color:#0871c8;font-weight:bold;text-align:center}
+.actions a:last-child{background:#087ee7;color:white}
+.category:nth-child(3) .actions a:last-child{background:#07843c}
+.category:nth-child(4) .actions a:last-child{background:#f08a00}
+.category:nth-child(5) .actions a:last-child{background:#7425d8}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.panel{min-width:0}
+.panel h2{font-size:22px;margin:0 0 14px}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.item{border:1px solid #dce6ed;border-radius:9px;overflow:hidden;background:white}
+.thumb{height:105px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:47px;background:linear-gradient(135deg,#c9f3ff,#fff0d0)}
+.item:nth-child(2) .thumb{background:linear-gradient(135deg,#ffe0ed,#fff4bd)}
+.item:nth-child(3) .thumb{background:linear-gradient(135deg,#d9ffe1,#d9eaff)}
+.item h3{font-size:14px;margin:9px}
+.item p{font-size:12px;margin:0 9px 10px}
+.quiz{margin:0 3% 22px;padding:22px;border-radius:13px;background:linear-gradient(100deg,#e2f4ff,#f3faff);display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.quiz h2{margin:0 0 7px;font-size:24px}
+.quiz p{margin:0}
+.quiz-points{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;font-weight:bold}
+.quiz button{background:#087ee7;color:white;border:0;border-radius:8px;padding:15px 20px;font-weight:bold}
+footer{padding:28px 4% 12px;background:#eefaff;border-top:4px solid #7acb52}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1.2fr;gap:20px}
+footer h3{margin:0 0 10px}
+footer ul{padding-left:17px;margin:0;line-height:1.8;font-size:13px}
+footer p{font-size:13px;line-height:1.7}
+.social{font-size:24px}
+.copyright{border-top:1px solid #c5dce6;margin-top:20px;padding-top:12px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;font-size:12px}
+.notice{padding:12px;margin:12px 3%;background:#fff8d9;border-radius:8px;display:none}
+@media(max-width:1000px){
+ .categories{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .signs{display:none}
+ .footer-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .logo{font-size:22px}
+}
+@media(max-width:650px){
+ .topbar{padding:10px 12px;flex-wrap:wrap;gap:10px}
+ .logo{font-size:21px}
+ .logo .sprout{font-size:28px}
+ .search{order:3;flex-basis:100%;max-width:none}
+ .account{gap:5px}
+ .account .btn{padding:9px;font-size:12px}
+ .hero{padding:25px 18px;display:block;text-align:center}
+ .hero h1{font-size:37px}
+ .hero h2{font-size:21px}
+ .hero p{font-size:15px}
+ .features{justify-content:center;font-size:13px;gap:10px}
+ .ribbon{font-size:15px}
+ .hero-art{min-width:0;margin-top:14px}
+ .kids{font-size:72px}
+ .books span{font-size:17px}
+ section{padding:20px 12px}
+ .section-title{font-size:21px}
+ .categories{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+ .category{padding:12px 9px}
+ .cat-icon{font-size:39px}
+ .category h3{font-size:15px}
+ .category ul{font-size:12px}
+ .actions a{flex:1;font-size:11px;padding:8px 5px}
+ .split{grid-template-columns:1fr;gap:25px}
+ .cards{gap:8px}
+ .thumb{height:85px;font-size:38px}
+ .item h3{font-size:12px}
+ .item p{font-size:11px}
+ .quiz{margin:0 12px 20px;padding:18px}
+ .quiz h2{font-size:21px}
+ .footer-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+ .copyright{font-size:11px}
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+ <a class="logo" href="#" aria-label="MindSprout Home">
+  <span class="sprout">🌱📖</span>
+  <span>MindSprout<small>Learn · Practice · Grow</small></span>
+ </a>
+ <form class="search" id="searchForm">
+  <input id="searchInput" type="search" placeholder="Search worksheets, notes, quizzes..." aria-label="Search learning resources">
+  <button type="submit" aria-label="Search">🔍</button>
+ </form>
+ <div class="account">
+  <a class="btn" href="#contact">Login</a>
+  <a class="btn green" href="#contact">Sign Up</a>
+ </div>
+</header>
+
+<main>
+<section class="hero">
+ <div class="hero-copy">
+  <h1>Welcome to<br>Mind<span>Sprout</span></h1>
+  <h2>A Complete Learning Platform</h2>
+  <p>From Nursery to Competitive Exams</p>
+  <div class="features">
+   <span>📘 Learn</span><span>✏️ Practice</span><span>✅ Test</span><span>📥 Download</span><span>📈 Grow</span>
+  </div>
+  <div class="ribbon">Quality Education for Every Learner, Every Stage!</div>
+ </div>
+ <div class="hero-art">
+  <div class="kids">👦🏻　👧🏻</div>
+  <div class="books"><span>NURSERY</span><span>SCHOOL CLASSES</span><span>COMPETITIVE EXAMS</span></div>
+ </div>
+ <div class="signs"><span>Worksheets</span><span>Study Notes</span><span>PDF Downloads</span><span>Online Quizzes</span><span>Mock Tests</span></div>
+</section>
+
+<section id="categories">
+ <h2 class="section-title">🌱 Explore Our Learning Categories</h2>
+ <p class="subtitle">Choose your study level and start learning today.</p>
+ <div class="categories">
+  <article class="category">
+   <div class="cat-icon">🧒🏻🧩</div><h3>Nursery<br>LKG - UKG</h3>
+   <ul><li>Alphabets (A-Z)</li><li>Numbers 1-20</li><li>Shapes & Colours</li><li>Worksheets</li><li>Rhymes & Activities</li></ul>
+   <div class="actions"><a href="#worksheets">View Free Samples</a><a href="#worksheets">Start Learning →</a></div>
+  </article>
+  <article class="category">
+   <div class="cat-icon">👦🏻📚</div><h3>Classes 1 - 5</h3>
+   <ul><li>Hindi</li><li>English</li><li>Mathematics</li><li>EVS</li><li>Worksheets & Notes</li><li>Practice Questions</li></ul>
+   <div class="actions"><a href="#worksheets">View Free Samples</a><a href="#worksheets">Start Learning →</a></div>
+  </article>
+  <article class="category">
+   <div class="cat-icon">👧🏻📗</div><h3>Classes 6 - 10</h3>
+   <ul><li>Subject-wise Notes</li><li>NCERT Solutions</li><li>Important Questions</li><li>Worksheets</li><li>Previous Year Papers</li><li>Practice Tests</li></ul>
+   <div class="actions"><a href="#worksheets">View Free Samples</a><a href="#worksheets">Start Learning →</a></div>
+  </article>
+  <article class="category">
+   <div class="cat-icon">👨🏻‍🎓</div><h3>Competitive Exams</h3>
+   <ul><li>General Knowledge</li><li>Reasoning</li><li>Mathematics</li><li>Hindi & English</li><li>Current Affairs</li><li>Mock Tests</li></ul>
+   <div class="actions"><a href="#quiz">View Free Samples</a><a href="#quiz">Start Learning →</a></div>
+  </article>
+  <article class="category">
+   <div class="cat-icon">📄</div><h3>Worksheets & PDF</h3>
+   <ul><li>Printable Worksheets</li><li>Practice Sheets</li><li>Topic-wise PDFs</li><li>Activity Sheets</li><li>Download & Print</li><li>Free Content</li></ul>
+   <div class="actions"><a href="#worksheets">View Free Samples</a><a href="#worksheets">Start Learning →</a></div>
+  </article>
+ </div>
+</section>
+
+<div class="split">
+ <section class="panel" id="worksheets">
+  <h2>📋 Latest Worksheets <small>(Free Samples)</small></h2>
+  <div class="cards">
+   <a class="item searchable" href="#contact" data-search="number 5 counting nursery worksheet"><div class="thumb">🔢🍎</div><h3>Number 5 Worksheet</h3><p>Nursery · Free Sample</p></a>
+   <a class="item searchable" href="#contact" data-search="alphabet A apple nursery worksheet"><div class="thumb">🔤🍎</div><h3>Alphabet A Worksheet</h3><p>Nursery · Free Sample</p></a>
+   <a class="item searchable" href="#contact" data-search="shapes triangle star square worksheet"><div class="thumb">🔺⭐</div><h3>Shapes Worksheet</h3><p>Early Learning</p></a>
+   <a class="item searchable" href="#contact" data-search="counting numbers 1 2 3 4 worksheet"><div class="thumb">🔢🖍️</div><h3>Counting Worksheet</h3><p>Nursery · Practice</p></a>
+   <a class="item searchable" href="#contact" data-search="tracing lines pre writing worksheet"><div class="thumb">〰️✏️</div><h3>Tracing Lines</h3><p>Fine Motor Skills</p></a>
+   <a class="item searchable" href="#contact" data-search="colouring drawing activity sheet"><div class="thumb">🎨🖼️</div><h3>Drawing Activity</h3><p>Creative Learning</p></a>
+  </div>
+ </section>
+ <section class="panel" id="videos">
+  <h2>▶️ Latest YouTube Videos <small>(MindSprout)</small></h2>
+  <div class="cards">
+   <a class="item" href="https://www.youtube.com/" target="_blank" rel="noopener"><div class="thumb">🔤🎵</div><h3>A to Z Phonics Song</h3><p>Learn Alphabets for Kids</p></a>
+   <a class="item" href="https://www.youtube.com/" target="_blank" rel="noopener"><div class="thumb">🔢🌈</div><h3>Numbers 1 to 20</h3><p>Counting for Nursery</p></a>
+   <a class="item" href="https://www.youtube.com/" target="_blank" rel="noopener"><div class="thumb">🔺🟦</div><h3>Shapes for Kids</h3><p>Learn with Fun</p></a>
+  </div>
+ </section>
+</div>
+
+<section class="quiz" id="quiz">
+ <div><h2>✏️ Online Quizzes & Tests</h2><p>Practice online quizzes, get instant results and track your progress.</p></div>
+ <div class="quiz-points"><span>🎯 Topic-wise Quizzes</span><span>📊 Instant Results</span><span>🏆 Track Progress</span><span>📝 Multiple Choice Tests</span></div>
+ <button id="quizButton" type="button">Open Quiz Centre →</button>
+</section>
+<div class="notice" id="notice" role="status"></div>
+</main>
+
+<footer id="contact">
+ <div class="footer-grid">
+  <div><a class="logo" href="#"><span class="sprout">🌱📖</span><span>MindSprout<small>Learn · Practice · Grow</small></span></a><p>Quality Education for Every Learner, Every Stage!</p></div>
+  <div><h3>Quick Links</h3><ul><li><a href="#categories">Nursery (LKG - UKG)</a></li><li><a href="#categories">Classes 1 - 5</a></li><li><a href="#categories">Classes 6 - 10</a></li><li><a href="#categories">Competitive Exams</a></li><li><a href="#worksheets">Worksheets & PDF</a></li></ul></div>
+  <div><h3>Helpful Links</h3><ul><li><a href="#videos">YouTube Videos</a></li><li><a href="#quiz">Online Quizzes</a></li><li><a href="#worksheets">Study Notes</a></li><li><a href="#contact">Contact Us</a></li><li><a href="#contact">About Us</a></li></ul></div>
+  <div><h3>Follow Us</h3><div class="social">▶️ f 📸 📌</div><p>Let's Learn Together with MindSprout!</p></div>
+  <div><h3>Contact</h3><p>✉️ mindsproutofficial01@gmail.com</p></div>
+ </div>
+ <div class="copyright"><span>© 2026 MindSprout. All Rights Reserved.</span><span><a href="#contact">Privacy Policy</a>　|　<a href="#contact">Terms of Use</a>　|　<a href="#contact">Contact Us</a></span></div>
+</footer>
+
+<script>
+const searchForm=document.getElementById('searchForm');
+const searchInput=document.getElementById('searchInput');
+const notice=document.getElementById('notice');
+searchForm.addEventListener('submit',function(event){
+ event.preventDefault();
+ const query=searchInput.value.trim().toLowerCase();
+ let count=0;
+ document.querySelectorAll('.searchable').forEach(function(item){
+  const match=!query||item.dataset.search.includes(query)||item.innerText.toLowerCase().includes(query);
+  item.style.display=match?'':'none';
+  if(match)count++;
+ });
+ notice.style.display='block';
+ notice.textContent=query?(count+' matching worksheet(s) found.'):'Showing all worksheets.';
+ document.getElementById('worksheets').scrollIntoView({behavior:'smooth'});
+});
+document.getElementById('quizButton').addEventListener('click',function(){
+ alert('MindSprout Quiz Centre is coming soon. We will add working quizzes in the next step!');
+});
+</script>
+</body>
+</html>
