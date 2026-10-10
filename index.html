@@ -129,6 +129,24 @@ footer ul{margin:0;padding-left:17px}
   footer p, footer li { font-size: 12px; overflow-wrap: anywhere; }
   .copyright { font-size: 10px; line-height: 1.5; }
 }
+ /* Footer and overflow fix */
+@media (max-width: 600px) {
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .footer-inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 14px 10px;
+  }
+  footer p, footer li, footer a {
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+  footer .copyright {
+    overflow-wrap: anywhere;
+  }
+}
 </style>
 </head>
 <body>
