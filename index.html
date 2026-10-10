@@ -147,6 +147,17 @@ footer ul{margin:0;padding-left:17px}
     overflow-wrap: anywhere;
   }
 }
+ @media (max-width: 600px) {
+  footer .footer-inner > div:last-child {
+    grid-column: 1 / -1;
+    min-width: 0;
+  }
+  footer .footer-inner > div:last-child a {
+    overflow-wrap: normal;
+    word-break: keep-all;
+    font-size: 14px;
+  }
+}
 </style>
 </head>
 <body>
