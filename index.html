@@ -99,6 +99,36 @@ footer ul{margin:0;padding-left:17px}
  .footer-inner{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;padding:20px 16px}
  .copyright{font-size:11px}
 }
+ /* Mobile improvements */
+@media (max-width: 600px) {
+  header { position: static; }
+  .topbar { gap: 8px; padding: 8px 12px; }
+  .brand { flex: 1; min-width: 0; gap: 5px; }
+  .brand .sprout { font-size: 24px; }
+  .brand strong { font-size: 22px; white-space: nowrap; }
+  .tagline { font-size: 10px; white-space: nowrap; }
+  .actions { gap: 6px; flex-shrink: 0; }
+  .actions .btn { padding: 8px 9px; font-size: 12px; }
+  .search { flex: 0 0 100%; width: 100%; margin: 0; }
+  .search input { font-size: 14px; padding: 12px 10px; }
+  .search button { padding: 0 15px; }
+  .section-title { font-size: 20px; line-height: 1.25; }
+  .section-sub { font-size: 14px; line-height: 1.4; }
+  .panel h2 { font-size: 17px; flex-wrap: wrap; line-height: 1.25; }
+  .panel h2 small { font-size: 13px; }
+  .video-art { font-size: 17px; line-height: 1.2; padding: 6px 28px 6px 6px; overflow-wrap: anywhere; }
+  .video-art::after { font-size: 13px; right: 5px; bottom: 5px; padding: 4px 7px; }
+  .tile-info { padding: 8px; font-size: 12px; overflow-wrap: anywhere; }
+  .tile-info strong { font-size: 12px; line-height: 1.25; }
+  .tile-info small { font-size: 11px; }
+  .quiz { gap: 12px; }
+  .quiz-features { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; }
+  .quiz .btn { width: 100%; text-align: center; }
+  .footer-inner { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; padding: 18px 14px; }
+  footer h3 { font-size: 16px; overflow-wrap: anywhere; }
+  footer p, footer li { font-size: 12px; overflow-wrap: anywhere; }
+  .copyright { font-size: 10px; line-height: 1.5; }
+}
 </style>
 </head>
 <body>
