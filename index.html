@@ -197,7 +197,22 @@ body {
 main {
   background: transparent;
 }
-```
+/* Decorative clouds and green leaves */
+body {
+  background:
+    radial-gradient(circle at 0% 8%, rgba(135, 206, 250, 0.45) 0 55px, transparent 57px),
+    radial-gradient(circle at 5% 5%, rgba(173, 230, 255, 0.55) 0 75px, transparent 77px),
+    radial-gradient(circle at 100% 8%, rgba(135, 206, 250, 0.45) 0 55px, transparent 57px),
+    radial-gradient(circle at 95% 5%, rgba(173, 230, 255, 0.55) 0 75px, transparent 77px),
+    radial-gradient(ellipse at 0% 100%, rgba(104, 190, 91, 0.35), transparent 22%),
+    radial-gradient(ellipse at 100% 100%, rgba(104, 190, 91, 0.35), transparent 22%),
+    linear-gradient(135deg, #eafaff, #fff7f2 50%, #f0ffe8);
+  background-attachment: fixed;
+}
+
+main {
+  background: transparent;
+}
 </style>
 </head>
 <body>
