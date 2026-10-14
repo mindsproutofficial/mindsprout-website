@@ -332,6 +332,88 @@ main {
     border-radius:9px;
   }
 }
+ /* LKG - UKG/HKG card design for desktop */
+@media (min-width:601px) {
+  .cat:nth-child(2) .cat-top {
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    padding:0;
+    background:transparent;
+  }
+
+  .cat:nth-child(2) .cat-top img {
+    width:100%;
+    height:auto;
+    max-width:none;
+    max-height:none;
+    display:block;
+    object-fit:contain;
+    border-radius:8px 8px 0 0;
+  }
+
+  .cat:nth-child(2) .cat-top h3 {
+    display:none;
+  }
+
+  .cat:nth-child(2) ul.nursery-topics {
+    list-style:none;
+    padding:6px 2px;
+    margin:0;
+    background:transparent;
+  }
+
+  .cat:nth-child(2) ul.nursery-topics li {
+    display:flex;
+    align-items:center;
+    gap:5px;
+    margin:0;
+    padding:4px 0;
+    color:#092b68;
+    font-size:12px;
+    font-weight:600;
+    line-height:1.25;
+  }
+
+  .cat:nth-child(2) ul.nursery-topics li::before {
+    content:"•";
+    color:#092b68;
+    font-size:17px;
+    flex-shrink:0;
+  }
+
+  .cat:nth-child(2) ul.nursery-topics .topic-icon {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:44px;
+    font-size:17px;
+    line-height:1.1;
+    flex-shrink:0;
+  }
+
+  .cat:nth-child(2) .cat-buttons {
+    padding:0;
+    margin-top:auto;
+    background:transparent;
+    border-radius:0;
+  }
+
+  .cat:nth-child(2) .cat-buttons .btn.start {
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    padding:10px 5px;
+    font-size:14px;
+    line-height:1.2;
+    text-align:center;
+    background:#087ee8;
+    border:1px solid #087ee8;
+    color:#fff;
+    border-radius:9px;
+  }
+}
 </style>
 </head>
 <body>
@@ -379,13 +461,26 @@ main {
 <div class="cat-buttons">
   <a class="btn start" href="#worksheets">Start Learning →</a>
 </div>
+</article>  
+<article class="cat">
+  <div class="cat-top">
+    <img src="images/lkg-ukg-child2.png" alt="LKG - UKG/HKG learning">
+    <h3>LKG - UKG/HKG</h3>
+  </div>
+  <ul class="nursery-topics">
+    <li><span class="topic-icon">🔤</span><span>English & Hindi</span></li>
+    <li><span class="topic-icon">🔢</span><span>Maths & Numbers</span></li>
+    <li><span class="topic-icon">🔴🔺🟦</span><span>Colours, Shapes & Matching</span></li>
+    <li><span class="topic-icon">📚</span><span>Rhymes & Stories</span></li>
+    <li><span class="topic-icon">✏️</span><span>Writing & Practice Worksheets</span></li>
+    <li><span class="topic-icon">🧩</span><span>EVS & General Knowledge</span></li>
+    <li><span class="topic-icon">💡</span><span>Logical Thinking & Problem Solving</span></li>
+  </ul>
+  <div class="cat-buttons">
+    <a class="btn start" href="#worksheets">Start Learning →</a>
+  </div>
 </article>
 
-  <article class="cat">
-    <div class="cat-top"><img src="images/lkg-ukg-child2.png" alt=""><h3>LKG – UKG/HKG</h3></div>
-    <ul><li>English & Hindi</li><li>Maths & Numbers</li><li>Rhymes & Stories</li><li>Practice Worksheets</li></ul>
-    <div class="cat-buttons"><a class="btn" href="#worksheets">View Free Samples</a><a class="btn start" href="#worksheets">Start Learning →</a></div>
-  </article>
   <article class="cat">
     <div class="cat-top"><img src="images/class1-5-child3.png" alt=""><h3>Classes 1–5</h3></div>
     <ul><li>Hindi & English</li><li>Mathematics</li><li>EVS & Science</li><li>Practice Questions</li></ul>
