@@ -563,6 +563,91 @@ main {
     border-radius: 9px;
   }
 }
+ /* Competitive Exams card styling */
+.cat:nth-child(5) .cat-top img {
+  border-radius: 8px;
+}
+
+@media (min-width: 601px) {
+  .cat:nth-child(5) .cat-top {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0;
+    background: transparent;
+  }
+
+  .cat:nth-child(5) .cat-top img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+
+  .cat:nth-child(5) .cat-top h3 {
+    display: none;
+  }
+
+  .cat:nth-child(5) ul.nursery-topics {
+    list-style: none;
+    padding: 6px 2px;
+    margin: 0;
+    background: transparent;
+  }
+
+  .cat:nth-child(5) ul.nursery-topics li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+    padding: 4px 0;
+    color: #092b68;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .cat:nth-child(5) ul.nursery-topics li::before {
+    content: "•";
+    color: #092b68;
+    font-size: 17px;
+    flex-shrink: 0;
+  }
+
+  .cat:nth-child(5) ul.nursery-topics .topic-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    font-size: 17px;
+    line-height: 1.1;
+    flex-shrink: 0;
+  }
+
+  .cat:nth-child(5) .cat-buttons {
+    display: flex;
+    width: 100%;
+    margin-top: auto;
+  }
+
+  .cat:nth-child(5) .cat-buttons .btn.start {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 5px;
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: center;
+    background: #7625e9;
+    border: 1px solid #7625e9;
+    color: #fff;
+    border-radius: 9px;
+  }
+}
 </style>
 </head>
 <body>
@@ -668,10 +753,25 @@ main {
   </div>
 </article>
   <article class="cat">
-    <div class="cat-top"><img src="images/competitive-child5.png" alt=""><h3>Competitive Exams</h3></div>
-    <ul><li>General Knowledge</li><li>Reasoning</li><li>Quantitative Aptitude</li><li>Mock Tests & Practice</li></ul>
-    <div class="cat-buttons"><a class="btn" href="#quiz">View Free Samples</a><a class="btn start" href="#quiz">Start Learning →</a></div>
-  </article>
+  <div class="cat-top">
+    <img src="images/competitive-child5.png" alt="Competitive Exams">
+    <h3>Competitive Exams</h3>
+  </div>
+
+  <ul class="nursery-topics">
+    <li><span class="topic-icon">🌍</span><span>General Knowledge &amp; Current Affairs</span></li>
+    <li><span class="topic-icon">🧠</span><span>Reasoning &amp; Mental Ability</span></li>
+    <li><span class="topic-icon">🔢</span><span>Quantitative Aptitude</span></li>
+    <li><span class="topic-icon">📚</span><span>English &amp; Hindi Language</span></li>
+    <li><span class="topic-icon">📖</span><span>Previous Year Papers</span></li>
+    <li><span class="topic-icon">📝</span><span>Mock Tests &amp; Practice</span></li>
+    <li><span class="topic-icon">🎯</span><span>Exam Preparation Guides</span></li>
+  </ul>
+
+  <div class="cat-buttons">
+    <a class="btn start" href="#quiz">Start Learning →</a>
+  </div>
+</article>
 </section>
 
 
