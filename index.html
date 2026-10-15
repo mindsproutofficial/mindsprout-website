@@ -452,6 +452,32 @@ main {
     flex-shrink: 0;
   }
 }
+ /* Classes 1-5 card: full-width button and rounded image */
+@media (min-width: 601px) {
+  .cat:nth-child(3) .cat-top img {
+    border-radius: 8px;
+  }
+
+  .cat:nth-child(3) .cat-buttons {
+    display: flex;
+    width: 100%;
+    margin-top: auto;
+  }
+
+  .cat:nth-child(3) .cat-buttons .btn.start {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px 5px;
+    font-size: 14px;
+    line-height: 1.2;
+    background: #07863d;
+    border: 1px solid #07863d;
+    color: #fff;
+    border-radius: 9px;
+  }
+}
 </style>
 </head>
 <body>
