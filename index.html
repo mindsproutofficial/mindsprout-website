@@ -478,6 +478,91 @@ main {
     border-radius: 9px;
   }
 }
+ /* Classes 6-10 card styling */
+.cat:nth-child(4) .cat-top img {
+  border-radius: 8px;
+}
+
+@media (min-width: 601px) {
+  .cat:nth-child(4) .cat-top {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0;
+    background: transparent;
+  }
+
+  .cat:nth-child(4) .cat-top img {
+    width: 100%;
+    height: auto;
+    max-width: none;
+    max-height: none;
+    display: block;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+
+  .cat:nth-child(4) .cat-top h3 {
+    display: none;
+  }
+
+  .cat:nth-child(4) ul.nursery-topics {
+    list-style: none;
+    padding: 6px 2px;
+    margin: 0;
+    background: transparent;
+  }
+
+  .cat:nth-child(4) ul.nursery-topics li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+    padding: 4px 0;
+    color: #092b68;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .cat:nth-child(4) ul.nursery-topics li::before {
+    content: "•";
+    color: #092b68;
+    font-size: 17px;
+    flex-shrink: 0;
+  }
+
+  .cat:nth-child(4) ul.nursery-topics .topic-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    font-size: 17px;
+    line-height: 1.1;
+    flex-shrink: 0;
+  }
+
+  .cat:nth-child(4) .cat-buttons {
+    display: flex;
+    width: 100%;
+    margin-top: auto;
+  }
+
+  .cat:nth-child(4) .cat-buttons .btn.start {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 5px;
+    font-size: 14px;
+    line-height: 1.2;
+    text-align: center;
+    background: #f28a00;
+    border: 1px solid #f28a00;
+    color: #fff;
+    border-radius: 9px;
+  }
+}
 </style>
 </head>
 <body>
@@ -563,10 +648,26 @@ main {
   </div>
 </article>
   <article class="cat">
-    <div class="cat-top"><img src="images/class6-10-child4.png" alt=""><h3>Classes 6–10</h3></div>
-    <ul><li>Science & Mathematics</li><li>Hindi & English</li><li>Notes & Worksheets</li><li>Previous Year Papers</li></ul>
-    <div class="cat-buttons"><a class="btn" href="#worksheets">View Free Samples</a><a class="btn start" href="#worksheets">Start Learning →</a></div>
-  </article>
+    <article class="cat">
+  <div class="cat-top">
+    <img src="images/class6-10-child4.png" alt="Classes 6 to 10 learning">
+    <h3>Classes 6–10</h3>
+  </div>
+
+  <ul class="nursery-topics">
+    <li><span class="topic-icon">🔢</span><span>Maths &amp; Reasoning</span></li>
+    <li><span class="topic-icon">🔬</span><span>Science &amp; Experiments</span></li>
+    <li><span class="topic-icon">📚</span><span>Hindi &amp; English</span></li>
+    <li><span class="topic-icon">🌍</span><span>Social Science &amp; GK</span></li>
+    <li><span class="topic-icon">💻</span><span>Computer &amp; Technology</span></li>
+    <li><span class="topic-icon">📝</span><span>Notes &amp; Worksheets</span></li>
+    <li><span class="topic-icon">📋</span><span>Sample Papers &amp; Tests</span></li>
+  </ul>
+
+  <div class="cat-buttons">
+    <a class="btn start" href="#worksheets">Start Learning →</a>
+  </div>
+</article>
   <article class="cat">
     <div class="cat-top"><img src="images/competitive-child5.png" alt=""><h3>Competitive Exams</h3></div>
     <ul><li>General Knowledge</li><li>Reasoning</li><li>Quantitative Aptitude</li><li>Mock Tests & Practice</li></ul>
