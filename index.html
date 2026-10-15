@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">F
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -412,6 +412,44 @@ main {
     border:1px solid #087ee8;
     color:#fff;
     border-radius:9px;
+  }
+}
+ /* Classes 1-5 card: match first and second card typography */
+@media (min-width: 601px) {
+  .cat:nth-child(3) ul.nursery-topics {
+    list-style: none;
+    padding: 6px 2px;
+    margin: 0;
+    background: transparent;
+  }
+
+  .cat:nth-child(3) ul.nursery-topics li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+    padding: 4px 0;
+    color: #092b68;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .cat:nth-child(3) ul.nursery-topics li::before {
+    content: "•";
+    color: #092b68;
+    font-size: 17px;
+    flex-shrink: 0;
+  }
+
+  .cat:nth-child(3) ul.nursery-topics .topic-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    font-size: 17px;
+    line-height: 1.1;
+    flex-shrink: 0;
   }
 }
 </style>
