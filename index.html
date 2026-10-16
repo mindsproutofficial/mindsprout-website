@@ -851,9 +851,9 @@ main {
     <a class="btn" href="#quiz" onclick="alert('Quiz Centre will be added in a future update.')">Open Quiz Centre →</a>
   </section>
 </main>
+ 
+<section class="panel" id="about" style="display:none;font-size:14px;line-height:1.6;padding:20px;">
 
-
-<section class="panel" id="about" style="font-size:14px;line-height:1.6;padding:20px;">
   <div style="text-align:center;max-width:850px;margin:0 auto 20px;">
     <h2 style="font-size:22px;margin:0 0 8px;">🌱 About MindSprout</h2>
     <h3 style="font-size:17px;margin:8px 0;">हर स्तर पर सीखें, अभ्यास करें और आगे बढ़ें</h3>
@@ -1004,7 +1004,9 @@ main {
   <div class="footer-inner">
     <div><h3>🌱 📖 MindSprout</h3><p><b>Learn · Practice · Grow</b></p><p>Quality Education for Every Learner, Every Stage !</p></div>
     <div><h3>Quick Links</h3><ul><li><a href="#worksheets">PreNursery - Nursery</a></li><li><a href="#worksheets">LKG - UKG/HKG</a></li><li><a href="#worksheets">Classes 1 - 5</a></li><li><a href="#quiz">Classes 6 - 10</a></li><li><a href="#worksheets">Competitive Exams</a></li></ul></div>
-    <div><h3>Helpful Links</h3><ul><li><a href="#videos">YouTube Videos</a></li><li><a href="#quiz">Online Quizzes</a></li><li><a href="#worksheets">Study Notes</a></li><li><a href="#contact" onclick="document.getElementById('contact').style.display='block';document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Contact Us</a></li><li><a href="#footer">About Us</a></li></ul></div>
+    <div><h3>Helpful Links</h3><ul><li><a href="#videos">YouTube Videos</a></li><li><a href="#quiz">Online Quizzes</a></li><li><a href="#worksheets">Study Notes</a></li><li><a href="#contact" onclick="document.getElementById('contact').style.display='block';document.getElementById('contact').scrollIntoView({behavior:'smooth'});return false;">Contact Us</a></li><li>
+<a href="#about" onclick="event.preventDefault();const about=document.getElementById('about');const isHidden=getComputedStyle(about).display==='none';about.style.display=isHidden?'block':'none';if(isHidden)about.scrollIntoView({behavior:'smooth',block:'start'});">About Us</a>
+</li></ul></div>
     <div><h3>Follow Us</h3><p class="social">▶️ f 📸 📌</p><p>Let's Learn Together with MindSprout !</p></div>
     <div><h3>Contact</h3><p>✉️ <a href="mailto:mindsproutofficial01@gmail.com">mindsproutofficial01@gmail.com</a></p></div>
   </div>
